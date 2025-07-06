@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Book</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST">
+        <h3>Search for Book:</h3>
+        <label>Title (optional):</label><br>
+        <input type="text" name="search_title"><br><br>
+
+        <label>Author (optional):</label><br>
+        <input type="text" name="search_author"><br><br>
+
+        <h3>New Details (any field you want to update):</h3>
+        <label>New Title:</label><br>
+        <input type="text" name="new_title"><br><br>
+
+        <label>New Author:</label><br>
+        <input type="text" name="new_author"><br><br>
+
+        <label>New Year:</label><br>
+        <input type="text" name="new_year"><br><br>
+
+        <input type="submit" value="Update Book">
+    </form>
+
+    <br>
+    <a href="/">← Back to Search</a>
+</body>
+</html>

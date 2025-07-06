@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add a New Book</h1>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Title:</label><br>
+        <input type="text" name="title"><br><br>
+
+        <label>Author:</label><br>
+        <input type="text" name="author"><br><br>
+
+        <label>Year:</label><br>
+        <input type="text" name="year"><br><br>
+
+        <button type="submit">Add Book</button>
+    </form>
+
+    <br>
+    <a href="/">← Back to Search</a>
+</body>
+</html>

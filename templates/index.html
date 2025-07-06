@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DRDO Book Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <a href="/add">+ Add a new book</a>
+    <a href="/delete">🗑 Delete Book</a>
+    <a href="/edit">✏️ Edit Book</a>
+</head>
+<body>
+    <h2>Drdo Digital Library Book Search</h2>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Enter keyword..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h3>Results:</h3>
+        <ol>
+        {% for book in results %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author }} ({{ book.year }})<br>
+                {{ book.abstract }}
+            </li>
+        {% endfor %}
+        </ol>
+        {% elif query %}
+        <p>No books found for "<strong>{{ query }}</strong>"</p>
+    {% endif %}
+</body>
+</html>

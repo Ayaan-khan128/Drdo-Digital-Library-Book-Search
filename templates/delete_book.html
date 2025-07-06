@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Book</title>
+</head>
+<body>
+    <h1>Delete Book</h1>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Title (optional):</label><br>
+        <input type="text" name="title"><br><br>
+
+        <label>Author (optional):</label><br>
+        <input type="text" name="author"><br><br>
+
+        <input type="submit" value="Delete Book(s)">
+    </form>
+
+    <br>
+    <a href="/">← Back to Search</a>
+</body>
+</html>
