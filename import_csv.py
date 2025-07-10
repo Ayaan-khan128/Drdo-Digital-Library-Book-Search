@@ -1,6 +1,5 @@
 import csv
 from app import db, Book, app  # make sure these match your actual file structure
-
 with app.app_context():
     with open('synthetic_books_dataset.csv', newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
