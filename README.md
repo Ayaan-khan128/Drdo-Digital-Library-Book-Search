@@ -4,6 +4,9 @@ A Flask-based web app for searching books in D.R.D.O library books using fuzzy k
 - Search by title ,author,year or keywords.
 - Sq lite database
 - Flask-based web interface
+- Add new books using a web form by title,author and year
+- Delete books by title and author
+- Edit book details
 - #How to run
 - Clone the repo
 - Create virtual environment
